@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block main %}
+    <head>
+        <meta charset="UTF-8">
+        <title>My Profile </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}" />
+    </head>
+    <header>
+        <div class="flex-container">
+        <div id="head" class="flex-item">
+            <center><img src="{{ url_for('static', filename='img.jpeg') }}" alt ="Janai's Photo" width="200" height="173" style="border-radius: 50%; padding-top: 15px;" /></center>
+            <h1>Janai Anderson</h1>
+            <p> @janai</p>
+            <p> Kingston, Jamaica</p>
+            <p> Joined {{y,m,d}}</p>
+        </div>
+        </div>
+    </header>
+    <body>
+        <p style="color: gray;">I am a Computer Science major at the University of the West Indies and one day I hope to become a Software Engineer or a Web Developer. In my spare time I enjoy watching Youtube and playing volleyball.
+        </p>
+    </body>
+    <div class="following">
+        <div>
+            <h3> 10 </h3>
+            <p> Posts </p>
+        </div>
+        <div>
+            <h3> 1001 </h3>
+            <p> Followers </p>
+        </div>
+        <div>
+            <h3> 865 </h3>
+            <p> Following </p>
+        </div>
+    </div>
+    <button type="button">Follow</button>
+{% endblock %}
